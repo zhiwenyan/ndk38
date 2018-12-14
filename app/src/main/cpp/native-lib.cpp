@@ -26,26 +26,26 @@ JNICALL
 Java_com_steven_ndk38_MainActivity_stringFromJNI(
         JNIEnv *env,
         jobject /* this */) {
-    int sum1 = sum(10);
-
-    __android_log_print(ANDROID_LOG_ERROR, TAG, "%d", sum1);
+//    int sum1 = sum(10);
+//
+//    __android_log_print(ANDROID_LOG_ERROR, TAG, "%d", sum1);
 
 
     ArrayStack<int> arrayStack;
 
-    for (int i = 0; i < 10; ++i) {
-        arrayStack.push(i);
-    }
-    while (!arrayStack.isEmpty()) {
-        __android_log_print(ANDROID_LOG_ERROR, TAG, "%d", arrayStack.pop());
-
-    }
+//    for (int i = 0; i < 10; ++i) {
+//        arrayStack.push(i);
+//    }
+//    while (!arrayStack.isEmpty()) {
+//        __android_log_print(ANDROID_LOG_ERROR, TAG, "%d", arrayStack.pop());
+//
+//    }
     LinkedStack<int> linkedStack;
     for (int i = 0; i < 10; ++i) {
         linkedStack.push(i);
 
     }
-  //  __android_log_print(ANDROID_LOG_ERROR, TAG, "%d", linkedStack.pop());
+    __android_log_print(ANDROID_LOG_ERROR, TAG, "%d", linkedStack.pop());
 
 
     std::string hello = "Hello from C++";

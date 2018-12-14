@@ -84,7 +84,7 @@ void ArrayStack<E>::push(E e) {
 
 template<class E>
 ArrayStack<E>::ArrayStack() {
-    //创建一个数组
+    //创建一个数组 并开辟内存空间
     array = (E *) malloc(sizeof(E) * 10);
 }
 

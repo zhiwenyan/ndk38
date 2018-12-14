@@ -34,7 +34,7 @@ public:
     //栈顶的节点
     Node<E> *top = NULL;
 public:
-    int size = 0;
+    int size = -1;
 
     LinkedStack();
 
@@ -65,22 +65,22 @@ private:
 template<class E>
 void LinkedStack<E>::push(E e) {
     Node<E> *new_node = new Node<E>(e, NULL);
-
-    if (top) {
+    top = new_node;
+    if (head) {
         top->next = new_node;
     } else {
         head = new_node;
     }
-    top = new_node;
     size++;
 }
 
 
 template<class E>
 E LinkedStack<E>::peek() {
-
+    return top;
 }
 
+//弹出  可以用双向链表 做到时间复杂度O(1)级别
 template<class E>
 E LinkedStack<E>::pop() {
     //delete top;
